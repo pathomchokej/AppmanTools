@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppmanTools", "AppmanTools\AppmanTools.csproj", "{EF01F385-93AD-4340-8945-47A42947CA98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonFormatterLib", "JsonFormatterLib\JsonFormatterLib.csproj", "{11BCA47D-1C81-4A9C-BF92-E080FDFA9804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonFormatterLibTests", "JsonFormatterLibTests\JsonFormatterLibTests.csproj", "{F3F237B9-B6CE-4AF9-8992-8E3FB2F9AA73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EF01F385-93AD-4340-8945-47A42947CA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF01F385-93AD-4340-8945-47A42947CA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF01F385-93AD-4340-8945-47A42947CA98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11BCA47D-1C81-4A9C-BF92-E080FDFA9804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11BCA47D-1C81-4A9C-BF92-E080FDFA9804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11BCA47D-1C81-4A9C-BF92-E080FDFA9804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11BCA47D-1C81-4A9C-BF92-E080FDFA9804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F237B9-B6CE-4AF9-8992-8E3FB2F9AA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F237B9-B6CE-4AF9-8992-8E3FB2F9AA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F237B9-B6CE-4AF9-8992-8E3FB2F9AA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F237B9-B6CE-4AF9-8992-8E3FB2F9AA73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
