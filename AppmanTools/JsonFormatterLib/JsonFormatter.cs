@@ -53,7 +53,7 @@ namespace JsonFormatterLib
             string desc = string.Empty;
             try
             {
-                ProcessJSONString(root, jsonString, 0);
+                ProcessJSONComposite(root, jsonString, 0);
                 status = JsonFormatterResult.Status.Success;
             }
             catch(Exception ex)
@@ -65,7 +65,7 @@ namespace JsonFormatterLib
             return new JsonFormatterResult(status, root, desc);
         }
 
-        private int ProcessJSONString(JsonCompositionItem parent, string jsonString, int index)
+        private int ProcessJSONComposite(JsonCompositionItem parent, string jsonString, int index)
         {
             // Find {
             int nextIndex = index;
@@ -166,6 +166,9 @@ namespace JsonFormatterLib
                     break;
 
                 case ValueType.Composite:
+                    JsonCompositionItem compositeItem = new JsonCompositionItem(name);
+                    index = ProcessJSONComposite(compositeItem, jsonString, startValueIndex);
+                    parent.Items.Add(compositeItem);
                     break;
             }
 
@@ -173,7 +176,6 @@ namespace JsonFormatterLib
         }
 
         private int GetStartCompositionIndex(string jsonString, int offset) => jsonString.IndexOf(StartComposition, offset);
-        private int GetEndCompositionIndex(string jsonString, int offset) => jsonString.IndexOf(EndComposition, offset);
         private int GetSeparatorIndex(string jsonString, int offset) => jsonString.IndexOf(SeparatorNameValue, offset);
 
         private enum ValueType
